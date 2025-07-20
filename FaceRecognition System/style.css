@@ -51,7 +51,7 @@ body {
 }
 
 .nav-links a:hover, .nav-links button:hover {
-  text-decoration: underline;
+  color: #240b66;
 }
 
 input, select, button {
