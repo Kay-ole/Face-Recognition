@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Employee</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkAuth(); startCamera(); prefillForm();">
+
+  <header class="main-header">
+  <div class="header-left">
+    <img src="assets/backgroundd.png" alt="DHA Logo" class="logo">
+    <h1>Face Recognition System</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="add-employee.html">Add Employee</a>
+    <button onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+
+  <main>
+    <form id="employeeForm">
+      <input type="text" id="idNumber" placeholder="ID Number" required>
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="text" id="surname" placeholder="Surname" required>
+      <input type="text" id="contact" placeholder="Contact Number" required>
+      <select id="department" required>
+        <option value="">Select Department</option>
+        <option>IT</option>
+        <option>Indexers</option>
+        <option>Scanner</option>
+        <option>QC</option>
+        <option>Prepars</option>
+        <option>Security</option>
+        <option>Runners</option>
+        <option>HR</option>
+      </select>
+      <button type="button" onclick="capturePhoto()">Capture Face</button>
+      <canvas id="canvas" style="display:none;"></canvas>
+      <video id="video" autoplay></video>
+      <img id="capturedImage" alt="Face" style="display:block;margin-top:10px;">
+      <button type="submit">Save Employee</button>
+    </form>
+    <p id="saveMessage"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Department Of Home Affairs</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

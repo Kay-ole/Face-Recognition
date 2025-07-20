@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="checkAuth(); loadEmployees();">
+  <header class="main-header">
+  <div class="header-left">
+    <img src="assets/backgroundd.png" alt="Company Logo" class="logo">
+    <h1>Face Recognition System</h1>
+  </div>
+  <nav class="nav-links">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="add-employee.html">Add Employee</a>
+    <button onclick="logout()">Logout</button>
+  </nav>
+</header>
+
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Contact</th>
+          <th>Department</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="employeeTable"></tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Department Of Home Affairs</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
